@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cleverson Resende">
+    <meta name="description" content="Fake e-commerce using FetchAPI it is library Jquery in addition to API dummyjson">
+
+    <!-- OPEN GRAPH TAGS-->
+    <meta property="og:title" content="Main page">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="URL">
+    <meta property="og:image" content="URL image">
+    <meta property="og:description" content="E-commerce fake website using API DummyJson it is FetchAPI">
+    <meta property="og:site_name" content="E-commerce"">
+
+    <!-- External Imports-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+     <!-- Local imports-->
+     <script src="../js/main.js"></script>
+     <link rel="stylesheet" href="../css/main.css">
+     <link rel="stylesheet" href="../css/cards.css">
+     <link rel="stylesheet" href="../css/categories_dropdown.css">
+
+    <title>E-commerce</title>
+</head>
+<body>
+    <div class="container-main">
+        <header>
+            <div class="header-container">
+                <div class="logotype" >
+                    <img src="../assets/images/asset 10.png" alt="">
+                </div>
+                <div class="cep">
+                    <a href="#">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Informe seu<span>CEP</span></p>
+                    </a>
+                </div>
+                <div class="search">
+                    <input type="search" name="" id="" placeholder="Buscar produtos, marcas e muito mais" >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="partners">
+                    <img src="../assets/images/asset 0.webp" alt="">
+                </div>
+                <nav>
+                    <div class="nav-menu">
+                        <ul>
+                            <li id="categories">
+                                <a href="#">
+                                    Categorias
+                                </a><span><i class="fa-solid fa-chevron-down"></i></span>
+
+                                <div class="dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Veículos</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Supermercado</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" id="showTech">Tecnologia</a><span><i id="icon" class="fa-solid fa-chevron-right" style="color: gray; font-size: 1rem; margin-left: 120px;"></i></span>
+
+                                            <div class="container-dropdown-technologies" id="showContent">
+                                                <div class="title-technologies"> 
+                                                    <h3>Tecnologia</h3>
+                                                </div>
+                                                <div class="line-the-title">
+                                                </div>
+                                
+                                                <div class="container-technologies">
+                                                    <div class="content-technologies">
+                                                        <div class="line-one-technologies">
+                                                            <div class="list one">
+                                                                <h4>Celulares e ofertas</h4>
+                                                                <ul>
+                                                                    <li>Acessórios para celulares</li>
+                                                                    <li>Peças para celulares</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="list two">
+                                                                <h4>Câmeras e acessórios</h4>
+                                                                <ul>
+                                                                    <li>Acessórios para câmeras</li>
+                                                                    <li>Câmeras</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="list three">
+                                                                <h4>Games</h4>
+                                                                <ul>
+                                                                    <li>Vídeo games</li>
+                                                                    <li>Fliperama e Arcade</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                
+                                                        <div class="line-two-technologies">
+                                                            <div class="list fuor">
+                                                                <h4>Informática</h4>
+                                                                <ul>
+                                                                    <li>Componentes para pc</li>
+                                                                    <li>Impressão</li>
+                                                                    <li>Acessórios para notebook</li>
+                                                                    <li>Conectividade e redes</li>
+                                                                    <li>Software</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="list five">
+                                                                <h4>Eletrônicos, Áudio e Vídeo</h4>
+                                                                <ul>
+                                                                    <li>Acessórios para aúdio e vídeo</li>
+                                                                    <li>Áudio portátil e acessórios</li>
+                                                                    <li>Componentes eletrônicos</li>
+                                                                    <li>Equipamentos para DJs</li>
+                                                                    <li>Som automotivo</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="list six">
+                                                                <h4>Televisores</h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">Casa e móveis</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Eletrodomésticos</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Esportes</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Construção</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Beleza</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                               Saúde 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Mais vendidos
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Lojas oficiais
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Ver mais
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                    
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Ofertas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Histórico
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Supermercado
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Moda
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Mercado Play
+                                </a>
+                                <div class="gratis">
+                                    <p>GRÁTIS</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Vender
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Contato
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="register-login">
+                    <ul>
+                        <li>
+                            <a href="#">Crie a sua conta</a>
+                        </li>
+                        <li>
+                            <a href="#">Entre</a>
+                        </li>
+                        <li>
+                            <a href="#">Compras</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-lg fa-cart-shopping"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main class="container-img-main">
+            <img src="../assets/images/asset 1.webp" alt="">
+
+            
+        </main>
+
+        <section class="container-install-app">
+            <div class="qrcode">
+                <img src="../assets/images/asset 2.webp" alt="">
+
+                <img src="../assets/images/asset 3.webp" alt="">
+            </div>
+        </section>
+
+        <section class="container-title-cards">
+            <div class="content-title-cards">
+                <h3>Ofertas para comprar agora </h3> <span><img src="../assets/icons/emoji_fire.gif" alt=""></span> <a href="#">ver mais</a>
+            </div>
+        </section>
+
+        <section class="container-cards">
+            <div class="content-carroseul-dynamic">
+
+                <!--Cards gerados dinamicamente-->
+                
+            </div>
+        </section>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</body>
+</html>

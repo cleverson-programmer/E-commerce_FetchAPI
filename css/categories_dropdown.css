@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+}
+
+:root{
+    --color-main: #ffe600;
+    --color-buttons-secondary: #3483fa;
+    --background-body: #E7E7E7;
+
+}
+
+body{
+    background-color: var(--background-body);
+}
+
+.container-main{
+    border: 2px solid red;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-main);
+}
+
+.nav-menu ul li .dropdown {
+    opacity: 0;
+    visibility: hidden;
+    background-color: #333333;
+    width: 250px;
+    position: absolute;
+    left: 29%;
+    top: 15%;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    z-index: 999;
+    box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-menu ul li .dropdown ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.nav-menu ul li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-menu ul li .dropdown ul li{
+    margin: 0;
+    padding: 10px 0 10px 0;   
+}
+
+.nav-menu ul li .dropdown ul li:hover{
+    background-color: #3483FA;
+    cursor: pointer;
+}
+
+.nav-menu ul li .dropdown ul li a{
+    color: white;
+    font-size: 1rem;
+    margin-left: 20px;
+}
+
+
+#showTech{
+    display: flex;
+    width: 100%;
+}
+
+/*DROPDOWN TECHNOLOGIES*/
+
+.container-dropdown-technologies{
+    background-color: white;
+    width: 70%;
+    height: 500px;
+    display: none;
+    overflow:hidden;
+    position: absolute;
+    left: 38%;
+    top: 15%;
+    z-index: 99999;
+}
+
+
+#icon {
+    font-size: 3rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.title-technologies h3{
+    display: flex;
+    margin: 30px 30px 10px 30px;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.line-the-title{
+    width: 100%;
+    margin-left: 30px;
+    border: 1px solid #DDDDDD;
+}
+
+.container-technologies{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+}
+
+.content-technologies ul{
+    list-style: none;
+}
+
+.line-one-technologies, .line-two-technologies{
+    margin-top: 20px;
+    display: flex;
+}
+
+.line-one-technologies .list, .line-two-technologies .list{
+    margin: 30px;
+}
+
+.list.three{
+    margin-left: 60px;
+}
+
+.line-one-technologies .list h4, .line-two-technologies .list h4{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.line-one-technologies .list li, .line-two-technologies .list li{
+    color: grey;
+    font-size: 0.9rem;
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+}
+
+.line-one-technologies .list li:hover, .line-two-technologies .list li:hover{
+    color: #3483FA;
+    transition: 0.2s ease;
+}

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+}
+
+:root{
+    --color-main: #ffe600;
+    --color-buttons-secondary: #3483fa;
+    --background-body: #E7E7E7;
+
+}
+
+body{
+    background-color: var(--background-body);
+}
+
+.container-main{
+    border: 2px solid red;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-main);
+}
+
+section.container-cards{
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-color: var(--background-body);
+}
+
+.content-carroseul-dynamic{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card{
+    position: relative;
+    max-width: 300px;
+    height: 407px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.cards-images img{
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+}
+
+.cards-informatios{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.cards-informatios .offers{
+    background-color: #3483fa;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.cards-informatios .original p{
+    color: grey;
+    text-decoration: line-through;
+}
+
+.discount-price span{
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.discount-price sup{
+    color: #00A650;
+    margin-left: 5px;
+}
+
+.free-shipping{
+    display: flex;
+    position: relative;
+    margin-top: 5px;
+}
+
+.free-shipping .shipping p{
+    font-size: 1rem;
+    color: #00A650;
+    font-weight: 400;
+}
+
+.free-shipping img{
+    margin-left: 5px;
+}
+
+.cards-informatios h3{
+    display: flex;
+    width: 95%;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    border: 1px solid blue;
+}
+
+/*Button carrousel*/
+.slick-prev, .slick-next {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+.slick-prev {
+    left: 10px;
+}
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev::before, .slick-next::before {
+    content: none;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 30px;
+    color:#3483fa;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    background-color: white;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+    font-size: 30px;
+    color:#3483fa;
+}
