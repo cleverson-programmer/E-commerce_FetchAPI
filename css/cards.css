@@ -113,7 +113,166 @@ section.container-cards{
     font-size: 1rem;
     font-weight: 300;
     margin-bottom: 10px;
-    border: 1px solid blue;
+}
+
+/*Style cards offers*/
+
+.container-offers{
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    background-color: var(--background-body);
+    justify-content: right;
+}
+
+.main-offer{
+    background-color: white;
+    width: 32%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    margin-right: 30px;
+}
+
+.title-offer{
+    position: absolute; 
+    height: min-content; 
+    display: flex;
+    margin: 20px;
+    min-width: 350px;
+}
+
+.title-offer p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: flex;
+    align-items: baseline;
+}
+
+.title-offer sub a{
+    color:#3483fa;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 15px;
+}
+
+/*Carrousel offers*/
+
+.content-offers-cards{
+    display: flex;
+    background-color: white;
+    width: 55%;
+    height: 500px;
+    margin-right: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-offers{
+    min-width: 230px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+
+.cards-images-offers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    background-color:white;
+}
+
+.cards-images-offers img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.offers-original p{
+    margin-top: 10px;
+    font-size: 1rem !important;
+}
+
+.installment-offer p{
+    display: flex;
+}
+
+.installment-offer span{
+    color:#00A650;
+}
+
+/*Card main style*/
+
+.content-main-offer{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.cards-images-offers-main{
+    display: flex;
+    justify-content: center;
+    height: 230px;
+    width: 100%;
+}
+
+.informations-offers{
+    padding: 10px;
+}
+
+.title-product-offer h3{
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.title-product-offer span{
+    font-size: 1rem;
+}
+
+.effect-title-cards:hover{
+    transition: 0.3s ease;
+    color: #3483fa;
+    cursor: pointer;
+}
+
+.price-origin{
+    font-size: 1rem;
+    color: gray;
+    text-decoration: line-through;
+    margin: 5px 0 5px 0;
+}
+
+.offer-price{
+    display: flex;
+}
+
+#discount-offer{
+    font-size: 2rem;
+}
+
+.offer-price sup{
+    display: flex;
+    color: #00A650;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.options-payment p{
+    font-size: 1rem;
+}
+
+.options-payment span{
+    color: #00A650;
 }
 
 /*Button carrousel*/
