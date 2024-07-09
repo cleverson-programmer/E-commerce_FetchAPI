@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+}
+
+.cep-container-central{
+    background-color:  white;
+    display: none;
+    position: absolute;
+    top: 35vh;
+    bottom: 35vh;
+    left: 25%;
+    right: 25%;
+    height: 30vh;
+    width: 50%;
+    border-radius: 5px;
+    z-index: 99999;
+}
+
+.content-cep-informations{
+    width: 100%;
+    padding: 20px 40px 20px 40px;
+}
+
+.cep-title-container h3{
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.cep-title-container p{
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 20px
+}
+
+.cep-title-container i{
+    position: absolute;
+    right: 40px;
+    top: 15%;
+    font-size: 1.7rem;
+    color: #3483FA;
+    cursor: pointer;
+}
+
+.form-cep{
+    display: flex;
+}
+
+.form-content-cep{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content-cep label{
+    font-size: 1rem;
+}
+
+.form-content-cep input{
+    width: 250px;
+    height: 50px;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.form-content-cep input:focus{
+    outline: none;
+    border-color: #3483FA;
+    border-radius: 5px;
+}
+
+.form-content-cep button{
+    border: none;
+    background-color: #3483FA;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    left: 30%;
+    bottom: 20%;
+    cursor: pointer;
+}
+
+.form-cep a:last-of-type{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #3483FA;
+}
+
+
+/*Efeito de overlay container CEP*/
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Preto com 50% de opacidade */
+    z-index: 9999; /* Certifique-se de que o overlay fica acima de outros elementos */
+    display: none; /* Inicialmente escondido */
+}
+
+
+#resultado{
+    display: none;
+    width: 300px;
+    height: 170px;
+    background-color: white;
+    position: absolute;
+    top:0;
+    left: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.error{
+    box-shadow: 0 0 3px rgba(202, 10, 10, 0.849);
+}
+
+.error i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.error p{
+    color: red;
+    font-size: 1rem;
+}
+
+.true{
+    box-shadow: 0 0 3px rgba(38, 240, 11, 0.849);
+    display: flex;
+    flex-direction: column;
+}
+
+.true i{
+    color: green;
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.true p{
+    margin: 5px;
+    display: flex;
+    position: relative;
+    color: green;
+}

@@ -33,12 +33,42 @@ body{
     width: 250px;
     position: absolute;
     left: 29%;
-    top: 15%;
+    top: 16%;
     border-radius: 5px;
     transform: translateX(-50%);
     z-index: 999;
     box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.balloon-simbol::before {
+    content: "";
+    position: absolute;
+    transform: translateX(-50%);
+    border-width: 0 10px 15px 10px;
+    border-style: solid;
+    
+  }
+
+  .balloon-simbol::after {
+    content: "";
+    position: absolute;
+    transform: translateX(-50%);
+    border-width: 0 12px 15px 12px;
+    border-style: solid;
+    
+  }
+
+.simbol-categories::before{
+    top: -10px;
+    left: 30%;
+    border-color: transparent transparent #333333 transparent;
+}
+
+.simbol-categories::after{
+    top: -10px;
+    left: 30%;
+    border-color: transparent transparent #333333 transparent;
 }
 
 .nav-menu ul li .dropdown ul {

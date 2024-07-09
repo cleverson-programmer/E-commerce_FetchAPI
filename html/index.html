@@ -29,10 +29,12 @@
      <link rel="stylesheet" href="../css/main.css">
      <link rel="stylesheet" href="../css/cards.css">
      <link rel="stylesheet" href="../css/categories_dropdown.css">
+     <link rel="stylesheet" href="../css/cep_code.css">
 
     <title>E-commerce</title>
 </head>
 <body>
+    <div id="overlay"></div>
     <div class="container-main">
         <header>
             <div class="header-container">
@@ -44,6 +46,17 @@
                         <i class="fa-solid fa-location-dot"></i>
                         <p>Informe seu<span>CEP</span></p>
                     </a>
+                    <div class="ballon-cep">
+                        <div class="balloon-simbol simbol-div-cep"></div>
+                        <div class="content-div-cep">
+                            <p>Confira o envio para seu endereço</p>
+                            <p>Inclua seu CEP para verificar os custos e prazos de entrega precisos na busca.</p>
+                            <div class="content-button-div">
+                                <button id="btn-includes-cep" type="button"><span>Incluir CEP</span></button>
+                                <button id="mais-tarde"><span>Mais tarde</span></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="search">
                     <input type="search" name="" id="" placeholder="Buscar produtos, marcas e muito mais" >
@@ -61,6 +74,7 @@
                                 </a><span><i class="fa-solid fa-chevron-down"></i></span>
 
                                 <div class="dropdown">
+                                    <div class="balloon-simbol simbol-categories"></div>
                                     <ul>
                                         <li>
                                             <a href="#">Veículos</a>
@@ -157,6 +171,60 @@
                     <ul>
                         <li>
                             <a href="#">Crie a sua conta</a>
+                            <!--
+                            <div class=" my-account">
+                                <div class="balloon-simbol simbol-div-account"></div>
+                                <div class="account">
+                                    <div class="account-simbol">
+
+                                    </div>
+                                    <h3>Nick client</h3>
+                                    <span>Meu perfil <i id="icon" class="fa-solid fa-chevron-right" style="color: gray; font-size: 1rem; margin-left: 120px;"></i></span>
+
+                                    <div class="img-account">
+                                        <img src="#" alt="">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="account-options">
+                                    <ul>
+                                        <li>
+
+                                        </li>
+                                        <li>
+
+                                        </li>
+                                        <li>
+
+                                        </li>
+                                    </ul>
+                                    <div class="line"></div>
+                                    <ul>
+                                        <li>
+
+                                        </li>
+                                        <li>
+
+                                        </li>
+                                        <li>
+
+                                        </li>
+                                        <li>
+
+                                        </li>
+                                    </ul>
+                                    <div class="line"></div>
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                    <div class="line"></div>
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            -->
                         </li>
                         <li>
                             <a href="#">Entre</a>
@@ -174,6 +242,7 @@
         <main class="container-img-main">
             <img src="../assets/images/asset 1.webp" alt="">
 
+            <!--
             <div class="container-dropdown-technologies" id="showContent">
                 <div class="title-technologies"> 
                     <h3>Tecnologia</h3>
@@ -235,6 +304,7 @@
                     </div>
                 </div>
             </div>
+            -->
             
         </main>
 
@@ -282,8 +352,14 @@
         </section>
 
     </div>
+
+    <section class="cep-container-central">
+
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/main.js"></script>
 
 </body>
 </html>

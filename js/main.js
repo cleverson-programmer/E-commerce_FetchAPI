@@ -1,3 +1,4 @@
+/*
 $(document).ready( () => {
     $('#showTech').mouseenter( () => { 
         $('#showContent').css({
@@ -25,6 +26,86 @@ $(document).ready( () => {
     });
 
 })
+*/
+
+//Sempre aparecer balão de cep quando recarregar página
+$(document).ready( () =>{
+    $('.ballon-cep').css({'display' : 'flex'})
+
+    $('#mais-tarde').click( () => {
+        $('.ballon-cep').css({'display' : 'none'})
+    })
+})
+
+//Mostrar container de digitar cep
+$('#btn-includes-cep').click( () =>{
+    $('.cep-container-central').css({'display' : 'flex'})
+    $('#overlay').fadeIn();
+    //Fechar container de digitar cep
+    $('#btn-close-cep').click( () =>{
+        $('.cep-container-central').css({'display' : 'none'})
+        $('#overlay').css({'display' : 'none'})
+    })
+})
+
+
+async function consultarCEP() {
+    const cep = document.getElementById('form-input').value;
+    const resultado = document.getElementById('resultado')
+
+    if (!cep) {
+        alert("Por favor, digite um CEP válido.");
+        return;
+    }
+
+    const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Erro ao consultar o CEP');
+        }
+        const data = await response.json();
+
+        if (data.erro) {
+            resultado.innerHTML = `
+            <p>! CEP não encontrado</p>
+            `;
+            
+            resultado.className = 'error'
+        } else {
+            
+            resultado.innerHTML = `
+                <i id="btn-cep-data" class="fa fa-close" aria-hidden="true"></i>
+                <p><strong>CEP:</strong> ${data.cep}</p>
+                <p><strong>Logradouro:</strong> ${data.logradouro}</p>
+                <p><strong>Bairro:</strong> ${data.bairro}</p>
+                <p><strong>Cidade:</strong> ${data.localidade}</p>
+                <p><strong>Estado:</strong> ${data.uf}</p>
+            `;
+
+            $('#resultado').css({'display' : 'flex'})
+            resultado.className = 'true'
+        }
+    } catch (error) {
+        console.error('Erro ao consultar o CEP:', error);
+        resultado.innerHTML = `
+        <i id="btn-cep-data" class="fa fa-close" aria-hidden="true"></i>   
+        <p>Erro ao consultar o CEP</p>
+        `;
+
+        $('#resultado').css({'display' : 'flex'})
+        resultado.className = 'error'
+    }
+
+    $(document).ready( () => {
+        $('#btn-cep-data').on('click',() => {
+            $('#resultado').css({'display' : 'none'})
+            $('#form-input').val('')
+            location.reload()
+        });
+    })
+}
 
 
 async function requestAllProducts() {
@@ -214,6 +295,45 @@ async function requestAllProducts() {
             
             mainCardOffer.appendChild(containerMainCardOffer)
 
+
+            function cepDiv(){
+
+                const cepContainer = document.querySelector('.cep-container-central')
+            
+                const cepTemplate = document.createElement('div')
+                cepTemplate.classList.add('content-cep-informations')
+            
+                cepTemplate.innerHTML = `
+                <div class="cep-title-container">
+                    <h3>
+                        Selecione onde quer receber suas compras
+                    </h3>
+                    <p>
+                        Você poderá ver custos e prazos de entrega precisos em tudo que procurar.
+                    </p>
+            
+                    <i id="btn-close-cep" class="fa fa-close" aria-hidden="true"></i>
+                </div>
+                <div class="form-cep">
+                    <div class="form-content-cep" >
+                        <label for="title-form" >Código de Endereço Postal</label>
+                        <input type="text" placeholder="Insira seu CEP" name="title-form" id="form-input">
+                        <button type="submit" onclick="consultarCEP()" >Usar</button>
+                    </div>
+                    <div>
+                        <a target="_blank" rel="noopener noreferrer" href="https://buscacepinter.correios.com.br/app/endereco/index.php">Não sei meu CEP</a>
+                    </div>
+                </div>
+
+                 <div id="resultado">
+                    
+                 </div>
+                `
+            
+                cepContainer.appendChild(cepTemplate)
+            }
+            cepDiv()        
+
     }
     catch (error) {
         console.error('Erro ao carregar os produtos:', error);
@@ -239,7 +359,6 @@ function initializeSlickCarousel() {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
                 }
             },
             {
@@ -271,7 +390,7 @@ function initializeSlickCarouselTwo() {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+
                 }
             },
             {

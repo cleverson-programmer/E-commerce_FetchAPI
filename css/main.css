@@ -157,6 +157,89 @@ header{
     padding-bottom: 10px;
 }
 
+.register-login .my-account{
+    background-color: white;
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    right: 200px;
+    top: 16%;
+    border-radius: 5px;
+}
+
+
+.ballon-cep{
+    display: none;
+    position: absolute;
+    width: 320px;
+    height: 150px;
+    top: 16%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.simbol-div-cep::before{
+    top: -10px;
+    left: 20%;
+    border-color: transparent transparent white transparent;
+}
+
+.simbol-div-cep::after{
+    top: -10px;
+    left: 20%;
+    border-color: transparent transparent white transparent;
+}
+
+.content-div-cep{
+    padding: 20px;
+}
+
+.content-div-cep p:first-child{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.content-div-cep p:last-of-type{
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.4rem;
+    color: #1f1e1e;
+}
+
+.content-button-div{
+    display: flex;
+    margin-top: 10px;
+}
+
+.content-button-div button:first-of-type{
+    background-color: #3483fa;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    padding: 8px 0px 8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.content-button-div button:first-of-type:hover{
+    background: #1d5dbd;
+    transition: 0.2s ease-in-out;
+}
+
+.content-button-div button:last-of-type{
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3483fa;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
 .container-img-main img {
     cursor: pointer;
     width: 100%;
